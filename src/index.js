@@ -1,17 +1,43 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Contact from './Contact';
+import styled from 'styled-components';
+import InformativeContainer from './components/InformativeContainer';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+const Principal = styled.div`
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: 834px;
+    padding: 95px 107px 95px 108px;
+  
+  `
+
+const PrincipalContainer = styled.div`
+  display: flex;
+  margin-top: 70px;
+  gap: 58px;
+
+  `
 root.render(
+
+
   <React.StrictMode>
-    <App />
+
+
+    <Principal>
+      <InformativeContainer />
+      <Contact />
+
+    </Principal>
+
+
+
   </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+
 reportWebVitals();
